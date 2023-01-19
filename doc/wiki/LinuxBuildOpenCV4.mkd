@@ -1,0 +1,50 @@
+[Home](./Home.mkd) &middot; _Topics_ &middot; [Index](./Index.mkd)
+
+## OttoCODE Development Wiki
+# Building OpenCV4 on Linux
+
+## Preparation
+
+- Clone Source Code
+  - [ ] From `https://github.com/opencv/opencv`, Fork
+  - [ ] From `https://github.com/TOtto-EclipseIR/opencv?organization=TOtto-EclipseIR&organization=TOtto-EclipseIR` Clone via GitHub CLI:
+  - [ ] $ `cd /home/develop/git/github-3rdParty`
+  - [ ] $ `gh repo clone TOtto-EclipseIR/opencv`
+
+- Reference: [Linux Build Tutorial](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html)
+
+
+- Prerequisites:
+    - **cmake, g++, &c**
+    - $ `sudo apt update && sudo apt install -y cmake g++ wget unzip`
+    - $ `sudo apt install cmake-qt-gui`
+
+- Configure
+    - $ `cd /home/develop/git/github-3rdParty/opencv`
+    - $ `mkdir -p build && cd build`
+    - $ `cmake ..`
+    - $ `cmake-gui`
+        - Source: `/home/develop/git/github-3rdParty/opencv`
+        - Build: `/home/develop/git/github-3rdParty/opencv/build`
+        - Search `QT` and check `WITH_QT`
+        - Search `GL` and check `WITH_OPENGL`
+        - Press **Configure**
+
+- Build
+    - $ `cd /home/develop/git/github-3rdParty/opencv/build`
+    - $ `make -j4`
+    - $ `cmake --build .` &larr; _(That's dot as in current directory)_
+    - $ `ll lib` should find libopencv_*.a, .so, .so.4.7.0
+    - $ 'll bin` should find test and sample executables
+
+- Install
+    - $ `sudo make install`  installs to:
+        - /usr/local/bin - executable files
+        - /usr/local/lib - libraries (.so)
+        - /usr/local/cmake/opencv4 - cmake package
+        - /usr/local/include/opencv4 - headers
+        - /usr/local/share/opencv4 - other files (e.g. trained cascades in XML format)
+
+
+
+

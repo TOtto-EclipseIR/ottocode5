@@ -1,0 +1,15 @@
+[Home](./Home.mkd) &middot; [Topics](./Topics.mkd) &middot; [Index](./Index.mkd)
+
+## OttoCODE Development Wiki
+# Development Environment: Utilities
+
+## Preparation
+
+## Install
+
+* SmartGit
+
+* Rabbit VCS
+    * [ ] $ `sudo add-apt-repository ppa:rabbitvcs/ppa`
+    * [ ] $ `sudo apt-get update'
+    * [ ] $ `sudo apt-get install rabbitvcs-nautilus3`

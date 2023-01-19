@@ -1,0 +1,25 @@
+[Home](./Home.mkd) &middot; [Topics](./Topics.mkd) &middot; [Index](./Index.mkd)
+
+## OttoCODE Development Wiki
+# Development Environment: Qt6
+
+## Preparation
+
+## Install
+
+## Setup
+
+## Tony's Preferences
+
+- Environment
+    - Keyboard
+        - [ ] Exit = nothing (remove Ctrl+Q, Alt+F4 remains)
+        - [ ] Run QMake = Ctrl+Q
+        - [ ] Copy Line Down = Alt+Down
+        - [ ] Delete Line = Alt+X
+    - Build & Run
+        - General
+            - [ ] Save Files Before Build
+        - Compile Output
+            - [ ] Open when building
+

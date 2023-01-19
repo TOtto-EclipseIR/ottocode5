@@ -1,5 +1,7 @@
 TEMPLATE = subdirs
 
-SUBDIRS += \
+SUBDIRS +=  \
+    console \
     desktop \
-    libs
+    libs    \
+

@@ -1,4 +1,8 @@
 TEMPLATE = subdirs
 
-SUBDIRS += \
-    Merlin
+SUBDIRS +=          \
+    LetsGoRacing    \
+    Merlin          \
+    QtHelpViewer
+
+
