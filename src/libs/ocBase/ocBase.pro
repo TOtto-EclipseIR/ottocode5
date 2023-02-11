@@ -15,6 +15,8 @@ SOURCES += \
     ocBase.cpp
 
 HEADERS += \
+    List.h \
+    Types.h \
     VersionInfo.h \
     ocBase_global.h \
     ocBase.h

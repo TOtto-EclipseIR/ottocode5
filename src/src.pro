@@ -4,4 +4,5 @@ SUBDIRS +=  \
     console \
     desktop \
     libs    \
+    tests
 
