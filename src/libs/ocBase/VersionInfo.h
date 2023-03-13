@@ -1,11 +1,12 @@
 #pragma once
+#include "ocBase.h"
 
 #include <QString>
 #include <QVersionNumber>
 
 #include "List.h"
 
-class VersionInfo
+class OCBASE_EXPORT VersionInfo
 {
 public:
     enum Segment

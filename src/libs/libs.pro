@@ -4,10 +4,12 @@ SUBDIRS +=      \
     ocBase      \
     ocColor     \
     ocCore      \
-    ocExe \
+    ocExe       \
     ocGui       \
     ocHelp      \
     ocImage     \
     ocNetwork   \
+    ocSql \
+    ocSvg \
     ocWidgets   \
-    ocXML       \
+    ocXml       \

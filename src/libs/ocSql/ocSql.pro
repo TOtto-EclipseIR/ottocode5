@@ -1,16 +1,15 @@
 QT -= gui
 TEMPLATE = lib
-DEFINES += OCEXE_LIBRARY
+DEFINES += OCSQL_LIBRARY
 
 include(../libs.pri)
+
 SOURCES += \
-    ActionManager.cpp \
-    ocExe.cpp
+    ocSql.cpp
 
 HEADERS += \
-    ActionManager.h \
-    ocExe_global.h \
-    ocExe.h
+    ocSql_global.h \
+    ocSql.h
 
 # Default rules for deployment.
 unix {

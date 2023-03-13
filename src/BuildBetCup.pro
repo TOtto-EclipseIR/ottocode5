@@ -1,10 +1,12 @@
 TEMPLATE = subdirs
 
 SUBDIRS +=  \
-    ./desktop/NixBoss \
+    ./desktop/BetCup \
     ./libs/ocBase \
     ./libs/ocGui \
     ./libs/ocExe \
+    ./libs/ocSql \
+    ./libs/ocXml \
 
 
 

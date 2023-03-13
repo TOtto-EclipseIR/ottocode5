@@ -1,10 +1,8 @@
 QT -= gui
-
 TEMPLATE = lib
 DEFINES += OCBASE_LIBRARY
-CONFIG += c++17
 
-include(../../version.pri)
+include(../libs.pri)
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -16,10 +14,12 @@ SOURCES += \
     KeySeg.cpp \
     KeySegList.cpp \
     KeyUidDMap.cpp \
+    Uid.cpp \
     VersionInfo.cpp \
     ocBase.cpp
 
 HEADERS += \
+    DualMap.h \
     Key.h \
     KeyList.h \
     KeyMap.h \
@@ -27,7 +27,8 @@ HEADERS += \
     KeySegList.h \
     KeyUidDMap.h \
     List.h \
-    Types.h \
+    TypeDefs.h \
+    Uid.h \
     VersionInfo.h \
     ocBase_global.h \
     ocBase.h

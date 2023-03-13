@@ -1,11 +1,20 @@
 #include "AbstractPage.h"
 
+#include <QTextEdit>
+#include <QVBoxLayout>
+#include <QWidget>
+
 AbstractPage::AbstractPage(const QString title, QWidget *parent)
     : QWidget{parent}
+    , mpMainLayout(new QVBoxLayout)
+    , mRawTextWidget(new QTextEdit)
+    , mParsedWidget(new QWidget)
     , mTitle(title)
 {
-
+    setObjectName("AbstractPage");
 }
+
+// ============== generated ==============
 
 const QString &AbstractPage::title() const
 {

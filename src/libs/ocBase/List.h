@@ -2,14 +2,14 @@
 
 #include <QList>
 
-#include "Types.h"
+#include "TypeDefs.h"
 
 template <typename T> class List
 {
 public:
     List() {;}
-    List(const Size size) : mList(size) {;}
-    List(const Size size, const T &t) : mList(size, t) {;}
+    List(const Count count) : mList(count) {;}
+    List(const Count count, const T &t) : mList(count, t) {;}
 
 public:
     bool isValidIndex(const Index ix) const { return ix >= 0 && ix < mList.count(); }

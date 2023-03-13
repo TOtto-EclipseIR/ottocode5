@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 7.0.2, 2023-02-11T02:51:45. -->
+<!-- Written by QtCreator 9.0.83, 2023-03-12T20:20:37. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -54,6 +54,7 @@
    <value type="QString" key="EditorConfiguration.ignoreFileTypes">*.md, *.MD, Makefile</value>
    <value type="bool" key="EditorConfiguration.inEntireDocument">false</value>
    <value type="bool" key="EditorConfiguration.skipTrailingWhitespace">true</value>
+   <value type="bool" key="EditorConfiguration.tintMarginArea">true</value>
   </valuemap>
  </data>
  <data>
@@ -67,10 +68,7 @@
     <value type="bool" key="AutoTest.Framework.QtQuickTest">true</value>
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
-   <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="1@/home/code/git/sf/ottocode-code/src/tests/utBase/tst_versioninfo.cpp:VersionInfo">Checked</value>
-    <value type="Qt::CheckState" key="1@/home/code/git/sf/ottocode-code/src/tests/utBase/tst_versioninfo.cpp:test_case1">Checked</value>
-   </valuemap>
+   <valuemap type="QVariantMap" key="AutoTest.CheckStates"/>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
    <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>
@@ -92,16 +90,16 @@
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Desktop</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 6.3.1 GCC 64bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 6.3.1 GCC 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;Desktop Qt 6.3.1 GCC 64bit&quot;</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;Desktop Qt 6.3.1 GCC 64bit&quot;</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt6.631.gcc_64_kit</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -241,14 +239,15 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/code/git/sf/ottocode-code/src/console/ConsApp/ConsApp.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/code/git/sf/ottocode-code/src/console/ConsApp/ConsApp.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ConsApp2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/console/ConsApp/ConsApp.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/console/ConsApp/ConsApp.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/console/ConsApp</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/console/ConsApp</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -257,14 +256,15 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/code/git/sf/ottocode-code/src/desktop/LetsGoRacing/LetsGoRacing.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/code/git/sf/ottocode-code/src/desktop/LetsGoRacing/LetsGoRacing.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">LetsGoRacing2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/desktop/LetsGoRacing/LetsGoRacing.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/desktop/LetsGoRacing/LetsGoRacing.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/LetsGoRacing</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/LetsGoRacing</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.2">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -273,14 +273,15 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/code/git/sf/ottocode-code/src/desktop/Merlin/Merlin.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/code/git/sf/ottocode-code/src/desktop/Merlin/Merlin.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Merlin2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/desktop/Merlin/Merlin.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/desktop/Merlin/Merlin.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/Merlin</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/Merlin</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.3">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -289,14 +290,15 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/code/git/sf/ottocode-code/src/desktop/QtHelpViewer/QtHelpViewer.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/code/git/sf/ottocode-code/src/desktop/QtHelpViewer/QtHelpViewer.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">QtHelpViewer2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/desktop/QtHelpViewer/QtHelpViewer.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/desktop/QtHelpViewer/QtHelpViewer.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/QtHelpViewer</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/QtHelpViewer</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.4">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -305,16 +307,33 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/code/git/sf/ottocode-code/src/tests/utBase/utBase.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/code/git/sf/ottocode-code/src/tests/utBase/utBase.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">utBase2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/tests/utBase/utBase.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/tests/utBase/utBase.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/code/git/sf/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/tests/utBase</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/tests/utBase</value>
    </valuemap>
-   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">5</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.5">
+    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="CustomOutputParsers"/>
+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/git/sf/ottocode/src/desktop/BetCup/BetCup.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/git/sf/ottocode/src/desktop/BetCup/BetCup.pro</value>
+    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/tmp/QtBuild/ottocode-code/build-src-Desktop_Qt_6_3_1_GCC_64bit-Debug/desktop/BetCup</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">6</value>
   </valuemap>
  </data>
  <data>

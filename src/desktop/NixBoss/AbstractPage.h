@@ -5,6 +5,7 @@
 #include <QIcon>
 #include <QString>
 #include <QStringList>
+class QVBoxLayout;
 class QTextEdit;
 
 class AbstractPage : public QWidget
@@ -28,6 +29,7 @@ public:
 
 
 private:
+    QVBoxLayout * mpMainLayout=nullptr;
     QTextEdit * mRawTextWidget=nullptr;
     QWidget * mParsedWidget=nullptr;
 

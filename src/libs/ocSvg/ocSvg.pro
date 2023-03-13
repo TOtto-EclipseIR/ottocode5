@@ -1,16 +1,18 @@
-QT -= gui
+QT += gui
+QT *= xml
+
 TEMPLATE = lib
-DEFINES += OCEXE_LIBRARY
+DEFINES += OCSVG_LIBRARY
 
 include(../libs.pri)
 SOURCES += \
-    ActionManager.cpp \
-    ocExe.cpp
+    SvgFile.cpp \
+    ocSvg.cpp
 
 HEADERS += \
-    ActionManager.h \
-    ocExe_global.h \
-    ocExe.h
+    SvgFile.h \
+    ocSvg_global.h \
+    ocSvg.h
 
 # Default rules for deployment.
 unix {
