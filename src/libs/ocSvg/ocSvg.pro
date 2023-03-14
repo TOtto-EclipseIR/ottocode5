@@ -5,6 +5,8 @@ TEMPLATE = lib
 DEFINES += OCSVG_LIBRARY
 
 include(../libs.pri)
+include(../../useCore.pri)
+
 SOURCES += \
     SvgFile.cpp \
     ocSvg.cpp

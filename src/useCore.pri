@@ -2,8 +2,10 @@
 
 message(----------------In useCore.pri)
 
-windows:LIBS *= -locqCore5
-linux:LIBS *= -locqCore
+windows:LIBS *= -locCore5
+linux:LIBS *= -locCore
+INCLUDEPATH *= ../../libs/ocCore
 
-#message(LIBS = $$LIBS)
+message(LIBS = $$LIBS)
+message(INCLUDEPATH = $$INCLUDEPATH)
 

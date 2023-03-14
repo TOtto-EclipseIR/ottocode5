@@ -7,6 +7,7 @@ class QQSize : public QSize
 public:
     QQSize() {;}
     QQSize(const QSize other) : QSize(other) {;}
+    QQSize(const int dim) : QSize(dim, dim) {;}
     QQSize(const int width, const int height) : QSize(width, height) {;}
 
 public:

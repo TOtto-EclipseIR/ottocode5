@@ -16,6 +16,6 @@ void SvgFile::clear()
     }
     mBytes.clear();
     mDocument.clear();
-    mBaseSize = QSize(1024);
+    mBaseSize = QQSize(1024);
     mSizeImageMap.clear();
 }

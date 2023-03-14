@@ -1,10 +1,14 @@
 QT -= gui
 QT *= xml
+QT *= sql
+QT *= network
 TEMPLATE = lib
 DEFINES += OCXML_LIBRARY
 
 include(../libs.pri)
 include(../../useBase.pri)
+include(../../useCore.pri)
+include(../../useNetwork.pri)
 
 SOURCES += \
     HtmlPage.cpp \

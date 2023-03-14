@@ -42,6 +42,8 @@ public: // non-const
     void set(const char *pch);
     Key append(const KeySeg &seg);
     Key append(const Key &key);
+    Key operator += (const KeySeg &seg) { return append(seg); }
+    Key operator += (const Key &key) { return append(key); }
 
 protected:
     static QChar separator();

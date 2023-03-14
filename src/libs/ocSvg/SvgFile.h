@@ -10,6 +10,8 @@
 #include <QPixmap>
 class QFile;
 
+#include <QQSize.h>
+
 class SvgFile
 {
 public:
@@ -36,7 +38,7 @@ private:
     QFile * mpFile=nullptr;
     QByteArray mBytes;
     QDomDocument mDocument;
-    QSize mBaseSize;
+    QQSize mBaseSize;
     QMap<QSize, QImage> mSizeImageMap;
 };
 

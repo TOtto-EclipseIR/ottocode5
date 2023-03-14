@@ -15,6 +15,7 @@ public:
     bool notContains(const Key &key) const { return ! contains(key); }
     const T value(const Key &key) const { return mKeyTMap.value(key); }
     const QList<Key> keys() const { return mKeyTMap.keys(); }
+    const QList<T> values() const { return mKeyTMap.values(); }
 
 public:
     void clear() { mKeyTMap.clear(); }
