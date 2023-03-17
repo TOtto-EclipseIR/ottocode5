@@ -9,12 +9,12 @@ include(../../useCore.pri)
 
 SOURCES += \
     Network.cpp \
-    QQUrl.cpp \
+    NetworkError.cpp \
     ocNetwork.cpp
 
 HEADERS += \
     Network.h \
-    QQUrl.h \
+    NetworkError.h \
     ocNetwork_global.h \
     ocNetwork.h
 

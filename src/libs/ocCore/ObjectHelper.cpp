@@ -1,22 +1,28 @@
 #include "ObjectHelper.h"
 
 
-ObjectHelper::ObjectHelper(QObject *obj) : mpObject(obj) {;}
-
-ObjectHelper::ObjectHelper(QObject *obj, const char * name)
-    : mpObject(obj)
-    , cmpMetaObject(obj->metaObject())
+ObjectHelper::ObjectHelper(QObject *obj)
+    : cmpObject(obj)
+    , cmpMetaObject(cmpObject->metaObject())
 {
-    const int tEnumIndex = cmpMetaObject->indexOfEnumerator(name);
-    mMetaEnum = cmpMetaObject->enumerator(tEnumIndex);
 }
 
-QString ObjectHelper::enumName(const int enumValue)
+QString ObjectHelper::enumKey(const char *enumName, const int enumValue)
 {
-    return mMetaEnum.valueToKey(enumValue);
+    return metaEnum(enumName).valueToKey(enumValue);
 }
 
-int ObjectHelper::enumValue(const char *name)
+int ObjectHelper::enumValue(const char *enumName, const char *key)
 {
-    return mMetaEnum.keyToValue(name);
+    return metaEnum(enumName).keyToValue(key);
 }
+
+QMetaEnum ObjectHelper::metaEnum(const char *enumName)
+{
+    QMetaEnum result;
+    const int tEnumIndex = cmpMetaObject->indexOfEnumerator(enumName);
+    if (tEnumIndex >= 0)
+        result = cmpMetaObject->enumerator(tEnumIndex);
+    return result;
+}
+

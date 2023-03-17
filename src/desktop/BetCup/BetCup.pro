@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 include(../desktop.pri)
@@ -6,6 +6,7 @@ include(../../useBase.pri)
 include(../../useCore.pri)
 include(../../useGui.pri)
 include(../../useExe.pri)
+include(../../useNetwork.pri)
 include(../../useSql.pri)
 include(../../useXml.pri)
 

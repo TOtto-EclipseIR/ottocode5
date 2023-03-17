@@ -1,18 +1,95 @@
 #include "Network.h"
 
-#include <QMetaEnum>
+#include <QtDebug>
+#include <QTimerEvent>
 
-#include <ObjectHelper.h>
 
-QString Network::errorName(const Error value)
+Network::Network(QObject *parent)
+    : QNetworkAccessManager(parent)
 {
-    ObjectHelper tOH(this, "Error");
-    return tOH.enumName(value);
+    setObjectName("Network");
 }
 
-Network::Error Network::errorValue(const char * name)
+void Network::initialize()
 {
-    ObjectHelper tOH(this, "Error");
-    return Network::Error(tOH.enumValue(name));
+    qDebug() << Q_FUNC_INFO;
+    // TODO What?
+    emit initialized(true);
+}
+
+QNetworkReply * Network::requestGet(QNetworkRequest *request)
+{
+    qDebug() << Q_FUNC_INFO;
+    QNetworkReply * result = nullptr;
+    if (nullptr == mpCurrentRequest)
+    {
+        mpCurrentRequest = request;
+        result = get(*mpCurrentRequest);
+        if (result)
+        {
+            mpCurrentReply = result;
+            mRequestStartMsec = QDateTime::currentMSecsSinceEpoch();
+            mRequestTimerId = startTimer(RequestTimerMsec());
+        }
+    }
+    return result;
+}
+
+void Network::handleReply(QNetworkReply *reply)
+{
+    Q_CHECK_PTR(reply);
+    qDebug() << Q_FUNC_INFO << reply->url().toString();
+    Q_ASSERT(mpCurrentReply == reply);
+    mpCurrentRequest = nullptr;
+    emit replyFinished(mpCurrentReply, mpCurrentRequest);
+}
+
+void Network::timerEvent(QTimerEvent *event)
+{
+    if (event->timerId() == mRequestTimerId)
+    {
+        emit requestTimeout(mpCurrentRequest);
+        mpCurrentRequest = nullptr;
+        event->accept();
+    }
+    else if (event->timerId() == mPeriodTimerId)
+    {
+        quint64 tCurrentMsecs
+            = QDateTime::currentMSecsSinceEpoch() - mRequestStartMsec;
+        emit requestProgress(tCurrentMsecs, mRequestTimerMsec, mpCurrentRequest);
+        event->accept();
+    }
+    else
+    {
+        event->ignore();
+    }
+}
+
+// ----------------------- properties ---------------------------
+
+int Network::PeriodTimerMsec() const
+{
+    return mPeriodTimerMsec;
+}
+
+void Network::PeriodTimerMsec(int newPeriodTimerMsec)
+{
+    if (mPeriodTimerMsec == newPeriodTimerMsec)
+        return;
+    mPeriodTimerMsec = newPeriodTimerMsec;
+    emit PeriodTimerMsecChanged(mPeriodTimerMsec);
+}
+
+int Network::RequestTimerMsec() const
+{
+    return mRequestTimerMsec;
+}
+
+void Network::RequestTimerMsec(int newRequestTimerMsec)
+{
+    if (mRequestTimerMsec == newRequestTimerMsec)
+        return;
+    mRequestTimerMsec = newRequestTimerMsec;
+    emit RequestTimerMsecChanged(mRequestTimerMsec);
 }
 

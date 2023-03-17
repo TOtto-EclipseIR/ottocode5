@@ -4,6 +4,7 @@
 #include <QNetworkReply>
 
 #include <Network.h>
+#include <NetworkError.h>
 #include <ObjectHelper.h>
 
 void XmlDocument::clear()
@@ -19,13 +20,12 @@ void XmlDocument::set(const QDomDocument &other)
 
 bool XmlDocument::set(QNetworkReply * reply)
 {
-    qDebug() << Q_FUNC_INFO << reply->url();
-    Network * pNetwork = new Network();
-    ObjectHelper tOH(pNetwork, "Error");
-    if (reply->error() == QNetworkReply::NoError)
-        set(reply->readAll());
+    qDebug() << Q_FUNC_INFO << reply->url() << reply->error();
+    NetworkError tNE(reply->error());
+    if (tNE)
+        mParseResult.errorMessage = tNE.codeKey();
     else
-        mParseResult.errorMessage = tOH.enumName(reply->error());
+        set(reply->readAll());
     return bool(mParseResult);
 }
 
