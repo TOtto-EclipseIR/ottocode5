@@ -6,11 +6,25 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
+#include <ObjectHelper.h>
+
 #include "NetworkError.h"
 
 class OCNETWORK_EXPORT Network : public QNetworkAccessManager
 {
     Q_OBJECT
+public:
+    enum Scheme
+    {
+        $null = 0,
+        http,
+        ftp,
+        https,
+        ftps,
+        git,
+        $end
+    };
+    typedef quint16 Port;
 
 public:
     explicit Network(QObject *parent = nullptr);

@@ -19,7 +19,8 @@ void Network::initialize()
 
 QNetworkReply * Network::requestGet(QNetworkRequest *request)
 {
-    qDebug() << Q_FUNC_INFO;
+    Q_CHECK_PTR(request);
+    qDebug() << Q_FUNC_INFO << request->url();
     QNetworkReply * result = nullptr;
     if (nullptr == mpCurrentRequest)
     {

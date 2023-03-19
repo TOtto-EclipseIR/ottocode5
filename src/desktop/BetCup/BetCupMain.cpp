@@ -63,6 +63,8 @@ void BetCupMain::initialize()
             this, &BetCupMain::openUrl);
     connect(mpUrlEdit, &QLineEdit::editingFinished,
             this, &BetCupMain::openUrlEntered);
+    connect(mpNetwork, &Network::requestProgress,
+            this, &BetCupMain::openUrlProgress);
     connect(mpNetwork, &Network::replyFinished,
             this, &BetCupMain::openUrlReplied);
     mpNetwork->initialize();
@@ -120,6 +122,18 @@ void BetCupMain::openUrlEntered()
     QNetworkRequest * pRequest = new QNetworkRequest(mCurrentUrl);
     mpNetwork->requestGet(pRequest);
     statusBar()->showMessage("Requesting " + mCurrentUrl.toString());
+}
+
+void BetCupMain::openUrlProgress(const int count, const int limit, QNetworkRequest *request)
+{
+    Q_UNUSED(request);
+    if (0 == count)
+    {
+        mpProgressBar->setEnabled(true);
+        mpProgressBar->setMinimum(0);
+        mpProgressBar->setMaximum(limit);
+    }
+    mpProgressBar->setValue(count);
 }
 
 void BetCupMain::openUrlReplied(QNetworkReply * reply, QNetworkRequest * request)

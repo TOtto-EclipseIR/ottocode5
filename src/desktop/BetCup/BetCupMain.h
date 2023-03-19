@@ -33,6 +33,7 @@ private slots:
     void setup();
     void openUrl();
     void openUrlEntered();
+    void openUrlProgress(const int count, const int limit, QNetworkRequest * request);
     void openUrlReplied(QNetworkReply * reply, QNetworkRequest *request);
 
 private:
